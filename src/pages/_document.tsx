@@ -40,9 +40,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <title>MD Editor</title>
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
