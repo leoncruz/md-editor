@@ -1,7 +1,13 @@
 import React from 'react';
 
+import { Container } from './styles';
+
 const Index: React.FC = () => {
-  return <h1>Home</h1>;
+  return (
+    <Container>
+      <h1>Home</h1>
+    </Container>
+  );
 };
 
 export default Index;
