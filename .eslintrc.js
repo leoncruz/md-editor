@@ -27,6 +27,7 @@ module.exports = {
     semi: [2, 'always'],
     quotes: ['error', 'single'],
     'comma-dangle': ['error', 'never'],
-    'no-use-before-define': 'off'
+    'no-use-before-define': 'off',
+    'space-before-function-paren': ['error', 'never']
   }
 };
