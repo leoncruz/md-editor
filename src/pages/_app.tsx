@@ -1,7 +1,9 @@
 import React from 'react';
 import { AppProps } from 'next/app';
-import { GlobalStyle, AppContainer } from './styles';
+import { ThemeProvider } from 'styled-components';
 import Head from 'next/head';
+
+import { GlobalStyle, AppContainer, theme } from './styles';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -9,10 +11,12 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>MD Editor</title>
       </Head>
-      <GlobalStyle />
-      <AppContainer>
-        <Component {...pageProps} />
-      </AppContainer>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <AppContainer>
+          <Component {...pageProps} />
+        </AppContainer>
+      </ThemeProvider>
     </>
   );
 }
