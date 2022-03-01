@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
+import { Input } from '../components/Input';
 
 const Index: React.FC = () => {
-  return <h1>Home</h1>;
+  const initialValue = '';
+  const [text, setText] = useState(initialValue);
+
+  const handleChangeText = useCallback((newText: string) => {
+    setText(newText);
+  }, []);
+
+  return (
+    <div>
+      <Input onChange={handleChangeText} />
+    </div>
+  );
 };
 
 export default Index;
