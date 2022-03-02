@@ -3,7 +3,7 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import Head from 'next/head';
 
-import { GlobalStyle, AppContainer, theme } from './styles';
+import { GlobalStyle, theme } from './styles';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -13,9 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <AppContainer>
-          <Component {...pageProps} />
-        </AppContainer>
+        <Component {...pageProps} />
       </ThemeProvider>
     </>
   );

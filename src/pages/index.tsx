@@ -1,18 +1,19 @@
-import React, { useCallback, useState } from 'react';
-import { Input } from '../components/Input';
+import React from 'react';
+
+import { EditorProvider } from '../contexts/EditorContext';
+
+import { Editor } from '../components/Editor';
+import { Preview } from '../components/Preview';
+import { AppContainer } from './styles';
 
 const Index: React.FC = () => {
-  const initialValue = '';
-  const [text, setText] = useState(initialValue);
-
-  const handleChangeText = useCallback((newText: string) => {
-    setText(newText);
-  }, []);
-
   return (
-    <div>
-      <Input onChange={handleChangeText} />
-    </div>
+    <EditorProvider>
+      <AppContainer>
+        <Editor />
+        <Preview />
+      </AppContainer>
+    </EditorProvider>
   );
 };
 

@@ -18,6 +18,6 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const AppContainer = styled.div`
-  max-width: 36rem;
-  margin: 3rem auto;
+  width: 100%;
+  display: flex;
 `;
