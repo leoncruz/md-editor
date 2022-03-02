@@ -16,6 +16,7 @@ export const Input = styled.textarea`
   resize: none;
   height: 100%;
   overflow: hidden;
+  background-color: ${props => props.theme.colors.bg};
 
   &:focus {
     outline: none;
