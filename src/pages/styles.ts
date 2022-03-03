@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html, body {
     background-color: ${props => props.theme.colors.bg};
+    overflow: hidden;
   }
 `;
 
