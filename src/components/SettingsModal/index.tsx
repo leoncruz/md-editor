@@ -1,4 +1,7 @@
 import React, { useCallback } from 'react';
+import { DefaultTheme } from 'styled-components';
+import { useTheme } from '../../contexts/ThemeApp';
+import { textColors } from '../../themes';
 
 import {
   Container,
@@ -19,11 +22,29 @@ export const SettingsModal: React.FC<Props> = ({
   isVisible,
   setVisible
 }) => {
+  const { setTheme } = useTheme();
+  const { color1, color2, color3, color4 } = textColors;
+
   const onAnimationEnd = useCallback(() => {
     if (animationType === 'Out') {
       setVisible(false);
     }
   }, [setVisible, animationType]);
+
+  const changeTextColor = useCallback(
+    (color: string) => {
+      setTheme((prevState: DefaultTheme) => {
+        return {
+          ...prevState,
+          colors: {
+            ...prevState.colors,
+            text: color
+          }
+        };
+      });
+    },
+    [setTheme]
+  );
 
   if (!isVisible) return <></>;
 
