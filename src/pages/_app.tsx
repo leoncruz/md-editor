@@ -3,7 +3,8 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import Head from 'next/head';
 
-import { GlobalStyle, theme } from './styles';
+import { GlobalStyle } from './styles';
+import { mainTheme } from '../themes';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -11,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>MD Editor</title>
       </Head>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={mainTheme}>
         <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>

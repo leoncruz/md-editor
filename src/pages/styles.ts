@@ -1,12 +1,4 @@
-import styled, { createGlobalStyle, DefaultTheme } from 'styled-components';
-
-export const theme: DefaultTheme = {
-  colors: {
-    bg: '#282828',
-    text: '#fbf1c7',
-    hint: '#a89984'
-  }
-};
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   * {
