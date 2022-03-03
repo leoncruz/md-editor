@@ -1,5 +1,9 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
+const FadeIn = keyframes`
+  from { opacity: 0 };
+  to {transform: opacity: 1 };
+`;
 export const Container = styled.div`
   height: 100vh;
   max-width: 36rem;
@@ -17,6 +21,7 @@ export const Input = styled.textarea`
   height: 100%;
   overflow: hidden;
   background-color: ${props => props.theme.colors.bg};
+  animation: ${FadeIn} 3s ease;
 
   &:focus {
     outline: none;
