@@ -66,5 +66,5 @@ export const CircleColor = styled.div`
   height: 20px;
   border-radius: 20px;
 
-  background-color: red;
+  background-color: ${({ color }) => color};
 `;

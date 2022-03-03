@@ -36,10 +36,10 @@ export const SettingsModal: React.FC<Props> = ({
       <SettingsArea>
         <CircleColorLabel>Text Color</CircleColorLabel>
         <ColorsArea>
-          <CircleColor />
-          <CircleColor />
-          <CircleColor />
-          <CircleColor />
+          <CircleColor color={color1} onClick={() => changeTextColor(color1)} />
+          <CircleColor color={color2} onClick={() => changeTextColor(color2)} />
+          <CircleColor color={color3} onClick={() => changeTextColor(color3)} />
+          <CircleColor color={color4} onClick={() => changeTextColor(color4)} />
         </ColorsArea>
       </SettingsArea>
     </Container>
