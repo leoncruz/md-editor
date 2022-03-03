@@ -22,8 +22,7 @@ export const Input = styled.textarea`
     outline: none;
   }
 
-  &:empty::before {
-    content: 'Type what do you want';
+  &::placeholder {
     color: ${props => props.theme.colors.hint};
   }
 `;
